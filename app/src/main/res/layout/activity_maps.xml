@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/setObtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="set O"
+            android:onClick="setO"/>
+
+        <Button
+            android:id="@+id/InitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Init_And_Register2"
+            android:text="Connect" />
+
+
+        <Button
+            android:id="@+id/tolBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="TakeOff8"
+            android:text="Take Off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/delSelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Delete_selected_marker"
+            android:text="Delete selected marker" />
+
+        <Button
+            android:id="@+id/showPathBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Show_path"
+            android:text="Show path" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/camBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cameraMove"
+            android:layout_weight="0.1"
+            android:text="O" />
+
+        <Button
+            android:id="@+id/uavBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onUAV"
+            android:text="find UAV" />
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="onStart"
+            android:text="@string/startMission" />
+
+        <Button
+            android:id="@+id/stopBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="onStop"
+            android:text="@string/stop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/encrypChB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="Encryption"
+            android:onClick="onEncryp"  />
+
+        <TextView
+            android:id="@+id/withPeriodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text=" with period (seconds):" />
+
+        <EditText
+            android:id="@+id/periodEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:ems="3"
+            android:inputType="number"
+            android:text="40"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.jmedeisis.bugstick.Joystick
+                android:id="@+id/joystick"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+                <!-- You may use any View here. -->
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@mipmap/ic_launcher_round" />
+
+            </com.jmedeisis.bugstick.Joystick>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jmedeisis.bugstick.Joystick
+                android:id="@+id/joystick2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+                <!-- You may use any View here. -->
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@mipmap/ic_launcher_round" />
+
+            </com.jmedeisis.bugstick.Joystick>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author: Mikita Saladukha" />
+
+        <TextView
+            android:id="@+id/keyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WiFi key will be here" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+</LinearLayout>

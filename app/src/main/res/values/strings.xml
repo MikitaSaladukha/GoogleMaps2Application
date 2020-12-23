@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ParrotUAVapp</string>
+    <string name="title_activity_maps">ParrotUAVapp</string>
+    <string name="deleteMarker">Delete №</string>
+    <string name="moveToN">Move to №</string>
+    <string name="moveToUAVpos">move to UAV position</string>
+    <string name="moveToFirst">Move to first marker</string>
+    <string name="moveToLast">Move to last marker</string>
+    <string name="startMission">Start</string>
+    <string name="stop">Stop</string>
+    <string name="dellAll">Delete all markers</string>
+    <string name="UAV">UAV</string>
+    <string name="lat">Latitude</string>
+    <string name="lng">Longitude</string>
+    <string name="onMap">Set parameters and go to map</string>
+    <string name="findUAV">Find UAV</string>
+</resources>
